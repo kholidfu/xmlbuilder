@@ -1,14 +1,20 @@
 #+TITLE: How to use
+#+AUTHOR: Kholid Fuadi
+#+DATE: 2015-05-10 Sun
+#+STARTUP: autoindent
 
 
 * What?
-  This is how this script work:
-  1) =python gensitemap-xsl.py > all.xml=
-	 list all .pdf files in current dir
-  2) =python splitter.py=
-	 split all.xml based on limit and write it to archive-%s.xml
-  3) =gensitemap-index.py > index.xml=
-	 list all .xml in current directories which is not index.xml and all.xml
+  This script will index all .pdf files in current directories
+  and create xml files, splitted according to lim variable 
+  in splitter.py
+* How this work?
+** 1. =python gensitemap-xsl.py > all.xml=
+   list all .pdf files in current dir
+** 2. =python splitter.py=
+   split all.xml based on limit and write it to archive-%s.xml
+** 3. =gensitemap-index.py > index.xml=
+   list all .xml in current directories which is not index.xml and all.xml
 * Usage
   #+BEGIN_SRC sh
     python builtxml.py
