@@ -19,3 +19,5 @@
   #+BEGIN_SRC sh
     python builtxml.py
   #+END_SRC
+* Credit
+  Thanks to [[http://www.elifulkerson.com/projects/gensitemap.php][elifulkerson.com]]
