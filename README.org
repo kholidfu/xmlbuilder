@@ -3,11 +3,11 @@
 
 * What?
   This is how this script work:
-  1. gensitemap-xsl.py > all.xml
+  1) =python gensitemap-xsl.py > all.xml=
 	 list all .pdf files in current dir
-  2. splitter.py
+  2) =python splitter.py=
 	 split all.xml based on limit and write it to archive-%s.xml
-  3. gensitemap-index.py > index.xml
+  3) =gensitemap-index.py > index.xml=
 	 list all .xml in current directories which is not index.xml and all.xml
 * Usage
   #+BEGIN_SRC sh
