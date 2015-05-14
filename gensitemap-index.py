@@ -25,9 +25,9 @@ import datetime
 #
 # Document extentions we are interested in generating data for.
 #
-EXTENSIONS = (".php", ".xml")
+EXTENSIONS = (".xml")
 
-DOMAIN = "http://127.0.0.1:8000"
+DOMAIN = "http://openbookmagazine.com/"
 
 # The default default is "Never"
 DEFAULT_FREQ = "always"
@@ -46,7 +46,7 @@ def recurse_directories ( rootdir="" ):
                     found = True
                     break
                
-            if found == True and file != "index.xml" and file != "all.xml":
+            if found == True and file != "index.xml" and file != "all.xml" and not ".xsl" in file:
 
 
                 modtime = os.path.getmtime(os.getcwd() + os.sep + rootdir + os.sep + file)
@@ -77,10 +77,10 @@ def recurse_directories ( rootdir="" ):
 
 
 print """<?xml version="1.0" encoding="UTF-8"?>"""
-print """<?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>"""
+print """<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>"""
 print """<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">"""
 
-recurse_directories()
+recurse_directories("xml")
 
 print "</urlset>"
 
