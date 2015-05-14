@@ -17,7 +17,7 @@
    list all .xml in current directories which is not index.xml and all.xml
 * Usage
   #+BEGIN_SRC sh
-    python builtxml.py
+    python builtxml.py example.com
   #+END_SRC
 * Credit
   Thanks to [[http://www.elifulkerson.com/projects/gensitemap.php][elifulkerson.com]]
