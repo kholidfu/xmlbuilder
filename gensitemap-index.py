@@ -21,13 +21,15 @@ import time
 import pytz
 import xml.sax.saxutils
 import datetime
+import sys
+
 
 #
 # Document extentions we are interested in generating data for.
 #
 EXTENSIONS = (".xml")
 
-DOMAIN = "http://openbookmagazine.com/"
+DOMAIN = "http://%s.com/" % sys.argv[1]
 
 # The default default is "Never"
 DEFAULT_FREQ = "always"
