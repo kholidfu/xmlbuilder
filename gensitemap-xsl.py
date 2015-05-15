@@ -29,7 +29,7 @@ import sys
 #
 EXTENSIONS = (".pdf")
 
-DOMAIN = "http://%s.com/" % sys.argv[1]
+DOMAIN = "http://%s/" % sys.argv[1]
 
 # The default default is "Never"
 DEFAULT_FREQ = "always"
